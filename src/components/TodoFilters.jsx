@@ -1,0 +1,32 @@
+function TodoFilters({ filter, setFilter, remaining }) {
+  return (
+    <div className="filters">
+      <div className="filter-buttons">
+        <button
+          className={filter === "all" ? "active" : ""}
+          onClick={() => setFilter("all")}
+        >
+          All
+        </button>
+
+        <button
+          className={filter === "active" ? "active" : ""}
+          onClick={() => setFilter("active")}
+        >
+          Active
+        </button>
+
+        <button
+          className={filter === "completed" ? "active" : ""}
+          onClick={() => setFilter("completed")}
+        >
+          Completed
+        </button>
+      </div>
+
+      <span>{remaining} remaining</span>
+    </div>
+  );
+}
+
+export default TodoFilters;
